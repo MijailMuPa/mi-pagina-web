@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOX PARTY EVENTOS</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo.png" />
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+  <style>
+    /* Estilo de tarjetas de servicios */
+    .servicios-section {
+      background-color: #f81c1c;
+      padding: 80px 40px;
+      color: white;
+      text-align: center;
+    }
+
+    .servicios-section h2 {
+      font-size: 2.8em;
+      margin-bottom: 70px;
+      font-family: 'Bebas Neue', cursive;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .card {
+      background: rgb(255, 255, 255);
+      border-radius: 40px;
+      overflow: hidden;
+      width: 280px;
+      color: rgb(2, 2, 2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+    .card-text {
+      padding: 10px 15px 20px;
+      text-align: center;
+    }
+
+    .card-text h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .card-text span {
+      font-size: 0.9em;
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+    }
+
+    /* Scroll suave para todo el documento */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Encabezado -->
+<header>
+  <div class="logo">
+    <img src="img/fondo.png" alt="NOX PARTY EVENTOS" />
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+      <li><a href="#servicios" class="nav-link">Servicios</a></li>
+    </ul>
+  </nav>  
+  <div class="contacto">
+    <a href="tel:+51928285138">📞 928 285 138</a>
+  </div>
+</header>
+
+<!-- Sección principal con video de fondo -->
+<section class="hero" id="inicio">
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="videos/videofondo.mp4" type="video/mp4" />
+    Tu navegador no soporta el video.
+  </video>
+  <div class="overlay"></div>
+
+  <div class="hero">
+  <div class="contenido">
+    <h2>LO MEJOR PARA TUS EVENTOS<br>EXPERIENCIAS DIVERTIDAS Y ÚNICAS</h2>
+    <h1 class="frase-impacto">SOMOS EL MEJOR EQUIPO<br><span>"NOX PARTY EVENTOS"</span></h1>
+    <a href="#nosotros" class="btn-continuar">CONTINUAR</a>
+  </div>
+</section>
+
+<!-- Sección de Integración -->
+<section class="integracion" id="nosotros">
+  <div class="contenido-integracion">
+
+    <!-- LADO IZQUIERDO: FORMAS COLORIDAS -->
+    <div class="formas-coloreadas">
+      <div class="diagonal-forma borde-naranja">
+        <img src="img/uno.jpg" alt="Evento 1" />
+      </div>
+      <div class="diagonal-forma borde-morado">
+        <img src="img/dos.jpg" alt="Evento 2" />
+      </div>
+      <div class="diagonal-forma borde-gris">
+        <img src="img/tres.jpg" alt="Evento 3" />
+      </div>
+    </div>
+
+    <!-- LADO DERECHO: TEXTO E IMPACTO VISUAL -->
+    <div class="texto-integracion">
+      <div class="años">NOX PARTY EVENTOS</div>
+      <h2>HUANCAYO</h2>
+      <h3>EVENTOS INOLVIDABLES <br>Y HORAS LOCAS LLENAS DE ENERGÍA</h3>
+      <p>
+        En <strong>NOX PARTY EVENTOS</strong> transformamos celebraciones en experiencias memorables. Nuestra misión es llenar de alegría, color y energía cada momento con propuestas originales, animaciones impactantes y un equipo creativo que lo da todo.
+      </p>
+      <p>
+        Desde la mejor <em>hora loca</em> hasta producciones personalizadas, fortalecemos la conexión entre personas con eventos diseñados para emocionar, divertir y dejar huella.
+      </p>
+      <a href="#servicios" class="btn-continuar">QUIERO MI EVENTO</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="servicios-section" id="servicios">
+  <h2>NUESTROS SERVICIOS</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="img/horaloca1.jpg" alt="HORALOCA " />
+      <div class="card-text">
+  <h3><a href="#horaloca" class="link-servicio">HORA LOCA</a></h3>
+  <span>LAS MEJORES DE HUANCAYO</span>
+</div>
+    </div>
+    <div class="card">
+      <img src="img/sorpresa.jpg" alt="Fórmula 1" />
+      <div class="card-text">
+    <h3><a href="#sorpresa" class="link-servicio">SORPRESA</a></h3>
+        <span>UN RECUERDO BONITO PARA TU PERSONA FAVORITA</span>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/dj.webp" alt="Escape Game" />
+      <div class="card-text">
+    <h3><a href="#djs" class="link-servicio">DJ´S Y LUCES</a></h3>
+        <span>CALIDAD Y VOLUMEN</span>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/decoracion.jpg" alt="Full Day" />
+      <div class="card-text">
+    <h3><a href="#decoracion" class="link-servicio">DECORACIONES</a></h3>
+        <span>INOLVIDABLE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Script para scroll suave (opcional, ya funciona con css) -->
+<script>
+  document.querySelectorAll('a.nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+ <!-- 4ta seccion -->
+<section id="horaloca" class="detalle-horaloca">
+  <div class="contenedor-dinamicas">
+    <div class="texto-dinamicas">
+      <div class="logo-dinamica">
+
+      </div>
+      <p>
+        Las experiencias de <strong>HORA LOCA</strong> de 
+        <strong>NOX PARTY EVENTOS</strong>
+        incluyen entre 8 y 10 dinámicas interactivas diseñadas para encender la energía, la diversión y la conexión entre los asistentes.
+Nuestros shows combinan baile, animación, personajes temáticos, concursos y juegos de agilidad que rompen el hielo y hacen vibrar cualquier celebración.
+      </p>
+      <p>
+       Creando eventos inolvidables, hemos perfeccionado una metodología que asegura la participación activa, el entusiasmo colectivo y la interacción espontánea.
+Cada presentación está cuidadosamente diseñada para adaptarse al estilo del evento, generando momentos únicos y memorables para todos los invitados.
+      </p>
+
+      <div class="beneficios">
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/clasica.png" alt="clasica" />
+          </div>
+          <p>CLASICA</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/andino.png" alt="andino" />
+          </div>
+          <p>ANDINA</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/tematica.png" alt="tematico" />
+          </div>
+          <p>TEMÁTICA</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/infantil.png" alt="infantil" />
+          </div>
+          <p>INFANTIL</p>
+        </div>
+      </div>
+
+      <div class="botones-dinamicas">
+        <a href="https://wa.me/51928285138?text=Hola,%20quisiera%20más%20información%20sobre%20la%20realización%20de%20eventos%20con%20NOX%20PARTY%20EVENTOS." 
+   target="_blank" 
+   class="btn-naranja">
+  📞 CONTACTANOS
+</a>
+          <a href="reserva.html" class="btn-morado" target="_blank">RESERVAR</a>
+        </div>
+      </div>
+
+    <div class="imagen-dinamica">
+      <video autoplay muted loop playsinline>
+        <source src="videos/videohl.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+  </div>
+</section>
+
+ <!-- 5ta seccion -->
+<section id="sorpresa" class="detalle-sorpresa">
+  <div class="contenedor-dinamicas">
+
+    <!-- VIDEO A LA IZQUIERDA -->
+    <div class="imagen-dinamica">
+      <video autoplay muted loop playsinline>
+        <source src="videos/videooso.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+
+    <!-- TEXTO A LA DERECHA -->
+    <div class="texto-dinamicas">
+      <p>
+        Las experiencias de las <strong>SORPRESAS</strong> de 
+        <strong>NOX PARTY EVENTOS</strong>
+        , las mejores emociones llegan cuando nadie las espera. Por eso, nuestras sorpresas en escena están diseñadas para romper la rutina y elevar la energía del evento.
+      </p>
+      <p>
+        Desde las divertidas tunanteras, los encantadores ositos sorpresa, hasta la presencia imponente del Patrón y otros personajes únicos, cada aparición está pensada para impactar, divertir y conectar con el público.
+
+Nuestros shows aparecen justo en el momento clave de la fiesta, desatando sonrisas, aplausos y momentos inolvidables.
+¡Porque en NOX, la magia sucede cuando la sorpresa toma el control!
+      </p>
+
+      <div class="beneficios">
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/oso.png" alt="clasica" />
+          </div>
+          <p>OSITOS</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/patron.png" alt="andino" />
+          </div>
+          <p>PATRÓN</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/tunantada.png" alt="tematico" />
+          </div>
+          <p>TUNANTERAS</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/huaylas.png" alt="infantil" />
+          </div>
+          <p>HUAYLASH</p>
+        </div>
+      </div>
+
+      <div class="botones-dinamicas">
+        <a href="https://wa.me/51928285138?text=Hola,%20quisiera%20más%20información%20sobre%20la%20realización%20de%20eventos%20con%20NOX%20PARTY%20EVENTOS." 
+   target="_blank" 
+   class="btn-naranja">
+  📞 CONTACTANOS
+</a>
+
+        <a href="reserva.html" class="btn-morado" target="_blank">RESERVAR</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 6ta seccion -->
+<section id="djs" class="detalle-djs">
+  <div class="contenedor-dinamicas">
+    <div class="texto-dinamicas">
+      <div class="logo-dinamica">
+
+      </div>
+      <p>
+        Los mejores <strong>DJ´S Y LUCES</strong> de 
+        <strong>NOX PARTY EVENTOS</strong>
+        están listos para transformar tu celebración en una experiencia inolvidable.
+Con mezclas que prenden la pista y un despliegue de luces que marca el ritmo de cada canción, llevamos la fiesta a otro nivel.
+      </p>
+      <p>
+       Contamos con DJs profesionales que dominan todos los géneros y se adaptan al estilo de tu evento, ya sea una boda, quinceañero, cumpleaños, evento corporativo o fiesta temática.
+Todo acompañado de un show visual con luces inteligentes, láser, humo, estructuras y efectos que hacen vibrar a todos los asistentes.
+      </p>
+
+      <div class="beneficios">
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/dj.png" alt="clasica" />
+          </div>
+          <p>DJ´S</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/luces.png" alt="andino" />
+          </div>
+          <p>LUCES</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/parlante.png" alt="tematico" />
+          </div>
+          <p>PARLANTE</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/barman.png" alt="infantil" />
+          </div>
+          <p>BARTENDER</p>
+        </div>
+      </div>
+
+      <div class="botones-dinamicas">
+        <a href="https://wa.me/51928285138?text=Hola,%20quisiera%20más%20información%20sobre%20la%20realización%20de%20eventos%20con%20NOX%20PARTY%20EVENTOS." 
+   target="_blank" 
+   class="btn-naranja">
+  📞 CONTACTANOS
+</a>
+
+        <a href="reserva.html" class="btn-morado" target="_blank">RESERVAR</a>
+      </div>
+    </div>
+
+    <div class="imagen-dinamica">
+      <video autoplay muted loop playsinline>
+        <source src="videos/luces.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+  </div>
+</section>
+
+
+<!-- 7MA seccion -->
+<section id="decoracion" class="detalle-decoracion">
+  <div class="contenedor-dinamicas">
+
+    <!-- VIDEO A LA IZQUIERDA -->
+    <div class="imagen-dinamica">
+      <video autoplay muted loop playsinline>
+        <source src="videos/decoracion.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+
+    <!-- TEXTO A LA DERECHA -->
+    <div class="texto-dinamicas">
+      <p>
+        Las increibles <strong>DECORACIONES</strong> de 
+        <strong>NOX PARTY EVENTOS</strong>
+        hace que cada celebración merece un escenario mágico, pensado hasta en el último detalle.
+Ofrecemos decoraciones temáticas para cumpleaños infantiles, bautizos, XV años, baby showers, pedidas y más, transformando cada espacio en un universo lleno de color, alegría y emoción.
+      </p>
+      <p>
+        Desde fondos personalizados, arcos de globos, mesas dulces, letras gigantes hasta detalles únicos según la ocasión, nuestro equipo se encarga de crear ambientes que sorprenden, inspiran y quedan en la memoria de todos.
+        Sea cual sea tu estilo, tierno, elegante, moderno o fantasioso en NOX hacemos que tu celebración luzca como siempre la soñaste.
+      </p>
+
+      <div class="beneficios">
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/bautizo.png" alt="clasica" />
+          </div>
+          <p>BAUTIZOS</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/xv años.png" alt="andino" />
+          </div>
+          <p>XV AÑOS</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/cumple.png" alt="tematico" />
+          </div>
+          <p>CUMPLEAÑOS</p>
+        </div>
+        <div class="beneficio">
+          <div class="icono-circular">
+            <img src="img/boda.png" alt="infantil" />
+          </div>
+          <p>MATRIMONIOS</p>
+        </div>
+      </div>
+
+      <div class="botones-dinamicas">
+        <a href="https://wa.me/51928285138?text=Hola,%20quisiera%20más%20información%20sobre%20la%20realización%20de%20eventos%20con%20NOX%20PARTY%20EVENTOS." 
+   target="_blank" 
+   class="btn-naranja">
+  📞 CONTACTANOS
+</a>
+
+        <a href="reserva.html" class="btn-morado" target="_blank">RESERVAR</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Script para scroll suave -->
+  <script>
+    document.querySelector('.btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('#dinamicas').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+  <footer class="footer">
+  <div class="footer-contenido">
+
+    <div class="footer-col">
+      <h3>NOX PARTY EVENTOS</h3>
+      <p>
+        Somos especialistas en crear experiencias inolvidables a través de la mejor hora loca, animaciones, sorpresas y personajes únicos.
+Transformamos cada celebración en un momento lleno de alegría, energía y conexión, haciendo que cada evento sea vibrante, emocionante y simplemente inolvidable.
+      </p>
+      <p class="copyright">© 2025 NOX PARTY EVENTOS • Marca Registrada</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Enlaces Útiles</h4>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Clientes</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="#">Artículos</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Libro de Reclamaciones</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col contacto-footer">
+      <h4>Contacto</h4>
+      <p>📞 +51 928 285 138</p>
+      <p>✉️ noxparty25@gmail.com</p>
+      <p>📍 Huancayo - Perú</p>
+      <div class="redes-sociales">
+  <a href="https://www.facebook.com/share/1F6CpFWjS2/?mibextid=qi2Omg" target="_blank">
+    <img src="img/fb.png" alt="Facebook" width="50" height="50">
+  </a>
+  <a href="https://www.instagram.com/noxpartyeventos?igsh=bmd6aWc3djV2N3Fi" target="_blank">
+    <img src="img/ig.png" alt="Instagram" width="50" height="50">
+  </a>
+  <a href="https://www.tiktok.com/@noxparty_eventos?_t=ZM-8xzwNUSNYUo&_r=1" target="_blank">
+    <img src="img/tt.png" alt="TikTok" width="50" height="50">
+  </a>
+</div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-politicas">
+    <a href="#">Política de privacidad</a>
+    <a href="#">Términos y condiciones</a>
+    <a href="#">Libro de reclamaciones</a>
+  </div>
+</footer>
+</body>
+</html>

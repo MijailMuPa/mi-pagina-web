@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reserva tu Evento - NOX PARTY EVENTOS</title>
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+    }
+
+    header {
+      background: rgb(255, 255, 255);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 4px 12px rgba(255, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 80px;
+    }
+
+    .contacto a {
+      background: linear-gradient(to right, #da9292, #bd83c7e7);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .contacto a:hover {
+      opacity: 0.85;
+    }
+
+    .form-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #ffffff, #ffffff);
+    }
+
+    .form-container {
+      background: white;
+      padding: 50px 40px;
+      border-radius: 25px;
+      box-shadow: 0 0 40px rgba(255, 105, 180, 0.2);
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .form-container h1 {
+      font-size: 3rem;
+      text-align: center;
+      background: linear-gradient(to right, #ff0202, #3d0842);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 30px;
+      font-weight: 900;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+      font-size: 1.1rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-top: 8px;
+      border: 1px solid #cccccc88;
+      border-radius: 12px;
+      background-color: #fdfdfd62;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-reservar {
+      margin-top: 30px;
+      background: linear-gradient(to right, #ff0000, #ff771c);
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-reservar:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(to right, #d800ff, #4d00ff);
+    }
+
+    @media (max-width: 768px) {
+      .form-container {
+        padding: 30px 20px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/fondo.png" alt="NOX Party Eventos">
+    </div>
+    <div class="contacto">
+      <a href="https://wa.me/51928285138" target="_blank">📞 Contáctanos</a>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <div class="form-container">
+      <h1>Reserva tu Evento</h1>
+      <form onsubmit="return enviarWhatsApp();">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" placeholder="Ej: Ana Pérez" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" placeholder="Ej: ana@email.com" required />
+
+        <label for="telefono">Número de teléfono:</label>
+        <input type="tel" id="telefono" placeholder="Ej: 912345678" required />
+
+        <label for="fecha">Fecha del evento:</label>
+        <input type="date" id="fecha" required />
+
+        <label for="hora">Hora del evento:</label>
+        <input type="time" id="hora" required />
+
+        <label for="tipo">Tipo de evento:</label>
+        <select id="tipo" required>
+          <option value="">Seleccione</option>
+          <option>Hora Loca</option>
+          <option>Sorpresa</option>
+          <option>DJ´S y Luces</option>
+          <option>Decoraciones</option>
+        </select>
+
+        <label for="mensaje">Mensaje adicional:</label>
+        <textarea id="mensaje" placeholder="Detalles, temática, ubicación, etc."></textarea>
+
+        <div class="button-container">
+          <button type="submit" class="btn-reservar">Reservar por WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function enviarWhatsApp() {
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const telefono = document.getElementById('telefono').value;
+      const fecha = document.getElementById('fecha').value;
+      const hora = document.getElementById('hora').value;
+      const tipo = document.getElementById('tipo').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      const texto = `🎉 *Reserva de Evento - NOX PARTY EVENTOS* 🎉\n\n` +
+                    `👤 *Nombre:* ${nombre}\n` +
+                    `📧 *Correo:* ${email}\n` +
+                    `📱 *Teléfono:* ${telefono}\n` +
+                    `📅 *Fecha del Evento:* ${fecha}\n` +
+                    `⏰ *Hora:* ${hora}\n` +
+                    `🎈 *Tipo de Evento:* ${tipo}\n\n` +
+                    `📝 *Mensaje adicional:*\n${mensaje}`;
+
+      const url = `https://wa.me/51928285138?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+      return false;
+    }
+  </script>
+</body>
+</html>
